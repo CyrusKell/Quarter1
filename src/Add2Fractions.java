@@ -13,14 +13,13 @@ import java.util.Scanner;
 public class Add2Fractions {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first fraction:");
+        System.out.println("Enter first integer or fraction:");
         Fraction fraction1 = new Fraction(sc.nextLine());
-        System.out.println("Enter second fraction:");
+        System.out.println("Enter second integer or fraction:");
         Fraction fraction2 = new Fraction(sc.nextLine());
         
-        
         long combinedDenominator = fraction1.denominator() * fraction2.denominator();
-
+        
         long mult1 = combinedDenominator/fraction1.denominator();
         long mult2 = combinedDenominator/fraction2.denominator();
         
@@ -35,8 +34,8 @@ public class Add2Fractions {
         combinedDenominator = combinedDenominator / gcd;
         
         System.out.println("");
-        if (combinedNumerator == combinedDenominator) {
-            System.out.println("Result: 1");
+        if (combinedDenominator == 1) {
+            System.out.println("Result: " + combinedNumerator);
         } else {
             System.out.println("Result: " + combinedNumerator + "/" + combinedDenominator);
         }
@@ -70,11 +69,23 @@ class Fraction {
         try {
             numerator = Long.parseLong(fraction.substring(0, fractionBarIndex));
             denominator = Long.parseLong(fraction.substring(fractionBarIndex + 1, fraction.length()));
+            
+            if (denominator == 0) {
+                System.out.println("Error: Cannot divide by 0");
+                System.exit(0);
+            }
         }
-        catch(NumberFormatException e) {
-            System.out.println("Error: One or more of the inputted values is not a fraction");
-            System.exit(0);
+        catch(NumberFormatException | StringIndexOutOfBoundsException e) {
+            try {
+                numerator = Long.parseLong(fraction);
+                denominator = 1;
+            }
+            catch(NumberFormatException e2) {
+                System.out.println("Error: Number cannot contain a decimal");
+                System.exit(0);
+            }
         }
+        
     }
     
     public long numerator() {
