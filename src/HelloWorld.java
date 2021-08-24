@@ -9,7 +9,6 @@
  * @author cyrus.kell
  */
 public class HelloWorld {
-    
     public static void main(String[] args) {
         String[] printStatements = {"Hello World", "Hi, my name is Cyrus Kell"};
     
