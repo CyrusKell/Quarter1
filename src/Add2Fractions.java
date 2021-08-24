@@ -13,9 +13,9 @@ import java.util.Scanner;
 public class Add2Fractions {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first integer or fraction:");
+        System.out.println("Enter first fraction:");
         Fraction fraction1 = new Fraction(sc.nextLine());
-        System.out.println("Enter second integer or fraction:");
+        System.out.println("Enter second fraction:");
         Fraction fraction2 = new Fraction(sc.nextLine());
         
         long combinedDenominator = fraction1.denominator() * fraction2.denominator();
@@ -76,14 +76,8 @@ class Fraction {
             }
         }
         catch(NumberFormatException | StringIndexOutOfBoundsException e) {
-            try {
-                numerator = Long.parseLong(fraction);
-                denominator = 1;
-            }
-            catch(NumberFormatException e2) {
-                System.out.println("Error: Number cannot contain a decimal");
-                System.exit(0);
-            }
+            System.out.println("Error: Inputted value is not a valid fraction");
+            System.exit(0);
         }
         
     }
