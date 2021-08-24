@@ -73,7 +73,7 @@ class Fraction {
             }
         }
         catch(NumberFormatException | StringIndexOutOfBoundsException e) {
-            System.out.println("Error: Inputted value is not a valid fraction");
+            System.out.println("Error: Inputted value is not a valid fraction or is too large");
             System.exit(0);
         }
         
