@@ -12,11 +12,11 @@ import java.util.Scanner;
 
 public class Add2Fractions {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.println("Enter first fraction:");
-        Fraction fraction1 = new Fraction(sc.nextLine());
+        Fraction fraction1 = new Fraction(in.nextLine());
         System.out.println("Enter second fraction:");
-        Fraction fraction2 = new Fraction(sc.nextLine());
+        Fraction fraction2 = new Fraction(in.nextLine());
         
         long fraction1Numerator = fraction1.numerator() * fraction2.denominator();
         long fraction2Numerator = fraction2.numerator() * fraction1.denominator();
@@ -28,7 +28,7 @@ public class Add2Fractions {
         long gcd = getGCD(combinedNumerator, combinedDenominator);
         
         combinedNumerator /= gcd;
-        combinedDenominator = combinedDenominator / gcd;
+        combinedDenominator /= gcd;
         
         System.out.println("");
         if (combinedDenominator == 1) {
