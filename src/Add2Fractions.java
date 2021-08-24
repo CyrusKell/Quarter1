@@ -18,13 +18,10 @@ public class Add2Fractions {
         System.out.println("Enter second fraction:");
         Fraction fraction2 = new Fraction(sc.nextLine());
         
+        long fraction1Numerator = fraction1.numerator() * fraction2.denominator();
+        long fraction2Numerator = fraction2.numerator() * fraction1.denominator();
+        
         long combinedDenominator = fraction1.denominator() * fraction2.denominator();
-        
-        long mult1 = combinedDenominator/fraction1.denominator();
-        long mult2 = combinedDenominator/fraction2.denominator();
-        
-        long fraction1Numerator = fraction1.numerator() * mult1;
-        long fraction2Numerator = fraction2.numerator() * mult2;
         
         long combinedNumerator = fraction1Numerator + fraction2Numerator;
         
@@ -61,7 +58,7 @@ public class Add2Fractions {
 }
 
 class Fraction {
-    public long numerator, denominator;
+    private long numerator, denominator;
     
     public Fraction(String fraction) {
         int fractionBarIndex = fraction.indexOf("/");
