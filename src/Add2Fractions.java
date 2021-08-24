@@ -23,10 +23,10 @@ public class Add2Fractions {
         long mult1 = combinedDenominator/fraction1.denominator();
         long mult2 = combinedDenominator/fraction2.denominator();
         
-        fraction1.numerator *= mult1;
-        fraction2.numerator *= mult2;
+        long fraction1Numerator = fraction1.numerator() * mult1;
+        long fraction2Numerator = fraction2.numerator() * mult2;
         
-        long combinedNumerator = fraction1.numerator() + fraction2.numerator();
+        long combinedNumerator = fraction1Numerator + fraction2Numerator;
         
         long gcd = getGCD(combinedNumerator, combinedDenominator);
         
