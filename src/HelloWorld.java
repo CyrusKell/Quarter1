@@ -10,7 +10,12 @@
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        String[] printStatements = {"Hello World", "Hi, my name is Cyrus Kell"};
+        String[] printStatements = {
+            "Hello World",
+            "Hi, my name is Cyrus Kell",
+            "I am taking Calculus BC",
+            "I'm a junior at St. Thomas Aquinas High School",
+            "I want to become a high level software engineer and I will accomplish this by studying computer science to the best of my ability"};
     
         for(String printStatement : printStatements) {
             System.out.println(printStatement);
