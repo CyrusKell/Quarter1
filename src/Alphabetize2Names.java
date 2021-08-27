@@ -18,6 +18,8 @@ public class Alphabetize2Names {
         System.out.println("Enter Name 2:");
         String name2 = in.nextLine();
         
+        System.out.println("Comparison result: " + name1.compareTo(name2));
+        
         if (name1.compareTo(name2) < 0) {
             System.out.println(name1 + ", " + name2);
         } else {

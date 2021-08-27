@@ -23,6 +23,6 @@ public class ReadUserInfo {
         int height = in.nextInt();
         
         System.out.println("Hello " + fullName + "!");
-        System.out.println("You are " + age + " years old and " + height + " feet tall!");
+        System.out.println("You are a " + gender + " who is " + age + " years old and " + height + " feet tall!");
     }
 }
