@@ -19,7 +19,7 @@ public class ReadUserInfo {
         String fullName = in.nextLine();
         System.out.println("Enter your age:");
         int age = in.nextInt();
-        System.out.println("Enter your height:");
+        System.out.println("Enter your height in feet:");
         float height = in.nextFloat();
         
         System.out.println("Hello " + fullName + "!");
