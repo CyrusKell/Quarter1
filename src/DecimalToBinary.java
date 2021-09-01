@@ -10,7 +10,7 @@
  */
 import java.util.Scanner;
 
-public class IntToBinary {
+public class DecimalToBinary {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter an integer greater than 0 to be converted to binary:");
