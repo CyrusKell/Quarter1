@@ -18,24 +18,19 @@ public class CalculateCoins {
         System.out.println("Enter dollar amount to be converted to coins:");
         dollars = in.nextDouble();
         
-        int[] coinsNeeded = {0, 0, 0, 0};
-        
-        coinsNeeded[0] = countCoinsNeeded(.25);
-        coinsNeeded[1] = countCoinsNeeded(.10);
-        coinsNeeded[2] = countCoinsNeeded(.05);
-        coinsNeeded[3] = countCoinsNeeded(.01);
-        
         System.out.println(
-                "You need " + coinsNeeded[0] + " quarters, " 
-                + coinsNeeded[1] + " dimes, " 
-                + coinsNeeded[2] + " nickels, and " 
-                + coinsNeeded[3] + " pennies");
+            "You need " 
+            + countCoinsNeeded(.25) + " quarters, " 
+            + countCoinsNeeded(.10) + " dimes, " 
+            + countCoinsNeeded(.05) + " nickels, and " 
+            + countCoinsNeeded(.01) + " pennies"
+        );
     }
     
     public static int countCoinsNeeded(double coinValue) {
         int numOfCoins = (int)(dollars / coinValue);
         
-        dollars -= numOfCoins * coinValue;
+        dollars = dollars % coinValue; 
         dollars = (double)Math.round(dollars * 100) / 100;
         
         return numOfCoins;
