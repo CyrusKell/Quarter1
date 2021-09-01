@@ -14,23 +14,23 @@ public class DecimalToBinary {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter an integer greater than 0 to be converted to binary:");
-        int integer = in.nextInt();
+        long decimal = in.nextLong();
         
-        if (integer < 0) {
+        if (decimal < 0) {
             System.out.println("Error: integer must be greater than 0");
             System.exit(0);
         }
         
-        System.out.println("Result: " + convertIntToBinaryString(integer));
+        System.out.println("Result: " + convertIntToBinaryString(decimal));
     }
     
-    public static String convertIntToBinaryString(int integer) {
+    public static String convertIntToBinaryString(long decimal) {
         String binary = "";
         
-        if (integer > 0) {
-            while (integer > 0) {
-            binary = integer % 2 + binary;
-            integer /= 2;
+        if (decimal > 0) {
+            while (decimal > 0) {
+            binary = decimal % 2 + binary;
+            decimal /= 2;
             }
         } else {
             binary = "0";

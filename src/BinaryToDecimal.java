@@ -14,25 +14,20 @@ public class BinaryToDecimal {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a binary number to be converted to decimal:");
-        long binary = in.nextLong();
+        String binary = in.nextLine();
         
         System.out.println("Result:" + convertBinaryToDec(binary));
     }
     
-    public static long convertBinaryToDec(long binary) {
+    public static long convertBinaryToDec(String binary) {
         long decimal = 0;
-        String binaryAsStr = String.valueOf(binary);
-        
         int power = 0;
         
-        for (int i = binaryAsStr.length() - 1; i > 0; i--) {
-            decimal += (binaryAsStr.charAt(i) * Math.pow(2, power));
-            System.out.println(decimal + " : " + power);
+        for (int i = binary.length() - 1; i >= 0; i--) {
+            decimal += (Integer.parseInt(binary.charAt(i) + "") * Math.pow(2, power));
             power++;
-            System.out.println(binaryAsStr);
-            binaryAsStr = binaryAsStr.substring(0, i - 1);
         }
-            
+
         return decimal;
     }
 }
