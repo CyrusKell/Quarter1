@@ -30,7 +30,7 @@ public class CalculateCoins {
     public static int countCoinsNeeded(double coinValue) {
         int numOfCoins = (int)(dollars / coinValue);
         
-        dollars = dollars % coinValue; 
+        dollars %= coinValue; 
         dollars = (double)Math.round(dollars * 100) / 100;
         
         return numOfCoins;
