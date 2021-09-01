@@ -26,7 +26,7 @@ public class BinaryToDecimal {
         int power = 0;
         
         for (int i = binaryAsStr.length() - 1; i > 0; i--) {
-            decimal += (binaryAsStr.charAt(i - 1) * Math.pow(2, power));
+            decimal += (binaryAsStr.charAt(i) * Math.pow(2, power));
             System.out.println(decimal + " : " + power);
             power++;
             System.out.println(binaryAsStr);
