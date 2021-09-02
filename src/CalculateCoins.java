@@ -11,12 +11,12 @@
 import java.util.Scanner;
 
 public class CalculateCoins {
-    public static int dollars;
+    public static int cents;
     
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter dollar amount to be converted to coins:");
-        dollars = (int)(in.nextDouble() * 100);
+        System.out.println("Enter cent amount to be converted to coins:");
+        cents = in.nextInt();
         
         System.out.println(
             "You need " 
@@ -28,9 +28,9 @@ public class CalculateCoins {
     }
     
     public static int countCoinsNeeded(double coinValue) {
-        int numOfCoins = (int)(dollars / coinValue);
+        int numOfCoins = (int)(cents / coinValue);
         
-        dollars %= coinValue; 
+        cents %= coinValue; 
         
         return numOfCoins;
     }
