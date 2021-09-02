@@ -25,11 +25,14 @@ public class CountDigitsOfInt {
         
         if (integer == 0) {
             numOfDigits = 1;
-        } else {
-            while (integer > 0) {
+        } 
+        if (integer < 0) {
+            integer *= -1;
+        }
+        
+        while (integer > 0) {
             numOfDigits++;
             integer /= 10;
-            }
         }
         
         
@@ -37,10 +40,13 @@ public class CountDigitsOfInt {
     }
     
     public static int countDigitsWithoutWhile(int integer) {
+        if (integer < 0) {
+            integer *= -1;
+        }
+        
         String integerAsStr = String.valueOf(integer);
         
         return integerAsStr.length();
     }
     
-//    public static int countDigitsWithoutWhile {}
 }
