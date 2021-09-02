@@ -21,6 +21,10 @@ public class BinaryToDecimal {
     }
     
     public static void validateBinary(long binary) {
+        if (binary < 0) {
+            System.out.println("Entered value is not valid binary");
+            System.exit(0);
+        }
         while (binary > 0) {
             if (binary % 10 != 0 && binary % 10 != 1) {
                 System.out.println("Entered value is not valid binary");

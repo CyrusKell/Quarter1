@@ -20,6 +20,8 @@ public class BuyStamps {
         double pricePerOneCentStamp = 0.01;
         
         int numOfFirstClassStamps  = (int)(money / pricePerFirstClassStamp);
+        money -= numOfFirstClassStamps * pricePerFirstClassStamp;
+        
         int numOfOneCentStamps  = (int)(money / pricePerOneCentStamp);
         
         System.out.println("You can buy " + numOfFirstClassStamps + " first class stamps");
