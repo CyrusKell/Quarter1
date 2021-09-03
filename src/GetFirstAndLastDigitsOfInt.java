@@ -16,13 +16,27 @@ public class GetFirstAndLastDigitsOfInt {
         System.out.println("Enter an integer:");
         int integer = in.nextInt();
         
-        int lastDigit = integer % 10;
+        System.out.println("First digit of your integer is " + getFirstDigit(integer));
+        System.out.println("Last digit of your integer is " + getLastDigit(integer));
+    }
+    
+    public static int getFirstDigit(int integer) {
+        if (integer < 0) {
+            integer *= -1;
+        }
         
         while (integer > 10) {
             integer /= 10;
         }
         
-        System.out.println("First digit of your integer is " + integer);
-        System.out.println("Last digit of your integer is " + lastDigit);
+        return integer;
+    }
+    
+    public static int getLastDigit(int integer) {
+        if (integer < 0) {
+            integer *= -1;
+        }
+
+        return integer % 10;
     }
 }
