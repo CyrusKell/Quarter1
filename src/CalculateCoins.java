@@ -15,8 +15,8 @@ public class CalculateCoins {
     
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter cent amount to be converted to coins:");
-        cents = in.nextInt();
+        System.out.println("Enter dollar amount to be converted to coins:");
+        cents = (int)(in.nextDouble() * 100);
         
         System.out.println(
             "You need " 
