@@ -39,6 +39,6 @@ public class BuyNotebooksWCareerTax {
 
         
         System.out.println("");
-        System.out.println(career + " - tax: $" + df.format(taxDue) + " total: $" + df.format(total));
+        System.out.println(career + " - tax due: $" + df.format(taxDue) + " total: $" + df.format(total));
     }
 }
