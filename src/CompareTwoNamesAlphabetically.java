@@ -19,7 +19,7 @@ public class CompareTwoNamesAlphabetically {
         String name2 = in.nextLine();
         
         if (name1.compareToIgnoreCase(name2) < 0) System.out.println("Name 1 comes before name 2");
-        if (name1.compareToIgnoreCase(name2) == 0) System.out.println("Name 1 is the same as name 2");
+        if (name1.compareToIgnoreCase(name2) == 0) System.out.println("SAME");
         if (name1.compareToIgnoreCase(name2) > 0) System.out.println("Name 1 comes after name 2");
     }
 }
