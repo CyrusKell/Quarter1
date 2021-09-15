@@ -20,7 +20,7 @@ public class BuyStamps {
         double pricePerOneCentStamp = 0.01;
         
         int numOfFirstClassStamps  = (int)(money / pricePerFirstClassStamp);
-        money %= pricePerFirstClassStamp;
+        money -= numOfFirstClassStamps * pricePerFirstClassStamp;
         
         int numOfOneCentStamps  = (int)(money / pricePerOneCentStamp);
         

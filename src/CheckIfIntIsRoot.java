@@ -14,17 +14,14 @@ public class CheckIfIntIsRoot {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter an integer:");
-        int integer = in.nextInt();
+        int n = in.nextInt();
 
-        if (integer % 2 == 1) System.out.println("odd");
-        if (integer % 5 == 0) System.out.println("divisible by 5");
+        boolean a = n % 2 != 0 && n > 10;
+        boolean b = n % 5 == 0 && n % 10 != 0;
+        boolean c = n * n - 23 * n + 22 == 0 || n % 10 == 3;
         
-        if (integer % 2 != 1 && integer % 5 != 0) {
-            if (integer * integer - 23 * integer + 22 == 0) {
-                System.out.println("root");
-            } else if (integer % 10 == 4) {
-                System.out.println("ends with 4");
-            }
+        if (a || b || c) {
+            System.out.println("TRUE");
         }
         
     }
