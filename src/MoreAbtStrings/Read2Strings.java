@@ -25,8 +25,9 @@ public class Read2Strings {
         System.out.println(str1.substring(0, str1.length() / 2) + str2.substring(str2.length() / 2));
         
         int count = 0;
-        while (str1.contains(str2)) {
-            str1 = str1.substring(str1.indexOf(str2) + str2.length());
+        int k = str1.indexOf(str2);
+        while (k != -1) {
+            k = str1.indexOf(str2, ++k);
             count++;
         }
         System.out.println(count);

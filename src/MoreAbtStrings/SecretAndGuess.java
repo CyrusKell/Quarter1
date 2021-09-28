@@ -20,8 +20,9 @@ public class SecretAndGuess {
         String guess = in.nextLine();
         
         int count = 0;
-        while (secret.contains(guess)) {
-            secret = secret.substring(secret.indexOf(guess) + guess.length());
+        int k = secret.indexOf(guess);
+        while (k != -1) {
+            k = secret.indexOf(guess, ++k);
             count++;
         }
         
