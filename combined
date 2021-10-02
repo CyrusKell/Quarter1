@@ -1,0 +1,381 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+import java.util.Scanner;
+
+public class CalcInvestmentTime {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter principle amount in dollars");
+        double principle = in.nextDouble();
+        
+        int months = 0;
+        while (principle < 50000) {
+            principle *= 1.05;
+            months++;
+        }
+        
+        System.out.println("It will take " + months + " months for your investment to be greater than or equal $5000");
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+public class CalcTimeUntilBroke {
+    public static void main(String[] args) {
+        int principle = 1000000;
+        int years = 0;
+        
+        while  (principle > 0) {
+            principle *= 1.08;
+            principle -= 100000;
+            years++;
+        }
+        
+        System.out.println("It will take " + years + " years for Lucky to empty his account");
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+import java.util.Scanner;
+
+public class CheckIfIntIsCool {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a positive integer:");
+        int integer = in.nextInt();
+        final int savedInteger = integer;
+        
+        int numOfDigits = 0;
+        int sumOfDigits = 0;
+        while (integer > 0) {
+            sumOfDigits += integer % 10;
+            integer /= 10;
+            numOfDigits++;
+        }
+        
+        System.out.println(savedInteger + " has " + numOfDigits + " digits");
+        if (savedInteger % sumOfDigits == 0) {
+            System.out.println(savedInteger + " is a cool number");
+        } else {
+            System.out.println(savedInteger + " is not a cool number");
+        }
+        
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+import java.util.Scanner;
+
+public class ConvertCents {
+    public static int cents;
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter money value in cents");
+        cents = in.nextInt();
+        
+        while (cents != -1) {
+            System.out.println(
+                    countCoinsNeeded(100) + " dollars "
+                    + countCoinsNeeded(25) + " quarters "
+                    + countCoinsNeeded(10) + " dimes "
+                    + countCoinsNeeded(5) + " nickels "
+                    + countCoinsNeeded(1) + " pennies"
+            );
+            
+            cents = in.nextInt();
+        }
+    }
+    
+    public static int countCoinsNeeded(double coinValue) {
+        int numOfCoins = (int)(cents / coinValue);
+        cents %= coinValue; 
+        return numOfCoins;
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author cyrus.kell
+ */
+import java.util.Scanner;
+
+public class getAverageGrade {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int grade = in.nextInt();
+        
+        int sum = 0, count = 0;
+        while (grade != -1) {
+            sum += grade;
+            count++;
+            grade = in.nextInt();
+        }
+        
+        int average = sum / count;
+        if (average >= 90) {
+            System.out.println("A");
+        } else if (average >= 80) {
+            System.out.println("B");
+        } else if (average >= 70) {
+            System.out.println("C");
+        } else if (average >= 60) {
+            System.out.println("D");
+        } else {
+            System.out.println("F");
+        }
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+import java.util.Scanner;
+
+public class GetAverageMaxAndMin {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter integers or 0 to stop");
+        int integer = in.nextInt();
+        
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        int count = 0, sum = 0;
+        while (integer != 0) {
+            if (integer > max) {max = integer;}
+            if (integer < min) {min = integer;}
+            
+            sum += integer;
+            count++;
+            
+            integer = in.nextInt();
+        }
+        
+        System.out.println("Max value: " + max);
+        System.out.println("Min value: " + min);
+        System.out.println("Average value: " + (double)sum / count);
+        
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+public class GetRandomSqrt {
+    public static void main(String[] args) {
+        int num1 = (int)(Math.random()*101);
+        int num2 = (int)(Math.random()*101);
+        
+        while (num1 != (double)num2 / num1 && num2 != (double)num1 / num2) {
+            num1 = (int)(Math.random()*101);
+            num2 = (int)(Math.random()*101);
+        }
+        
+        System.out.println("Number 1: " + num1);
+        System.out.println("Number 2: " + num2);
+        
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package WhileLoops;
+
+/**
+ *
+ * @author jayke
+ */
+import java.util.Scanner;
+
+public class PrintGoodJob {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a letter grade (A, B, or C) or Q to quit");
+        String grade = in.nextLine();
+        
+        while (!grade.equalsIgnoreCase("Q")) {
+            if (grade.equalsIgnoreCase("A")||grade.equalsIgnoreCase("B")||grade.equalsIgnoreCase("C")) {
+                System.out.println("Good job!");
+            } else {
+                System.out.println("Please enter A, B, C, or Q");
+            }
+            System.out.println("Enter another letter grade (A, B, or C) or Q to quit");
+            grade = in.nextLine();
+        }
+    }
+}
+import java.util.Scanner;
+
+public class Read2Strings {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = in.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = in.nextLine();
+        
+        System.out.println(str1.indexOf(str2));
+        System.out.println(str1.substring(0,3));
+        System.out.println(str1.substring(str1.length() - str2.length()));
+        System.out.println(str1.substring(0, str1.length() / 2) + str2.substring(str2.length() / 2));
+        
+        int count = 0;
+        int k = str1.indexOf(str2);
+        while (k != -1) {
+            k = str1.indexOf(str2, ++k);
+            count++;
+        }
+        System.out.println(count);
+
+//        System.out.println(str1.substring(str1.indexOf(str2) + str2.length()));
+        
+    }
+    
+}
+import java.util.Scanner;
+
+public class RemoveSpace {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a sentence:");
+        String sentence = in.nextLine();
+        
+        int i = sentence.indexOf(" ");
+        int count = 1;
+        while (i != -1) {
+            sentence = sentence.substring(0, i) + sentence.substring(i + " ".length());
+            i = sentence.indexOf(" ");
+            count++;
+        }
+        
+        System.out.println("Word count: " + count);
+        System.out.println(sentence);
+
+    }
+}
+import java.util.Scanner;
+
+public class ReplaceTheWithA {
+    
+    
+    
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a sentence:");
+        String sentence = in.nextLine();
+        
+        int i = sentence.indexOf("the");
+        while (i != -1) {
+            sentence = sentence.substring(0, i) + "A" + sentence.substring(i + "the".length());
+            i = sentence.indexOf("the");
+        }
+        
+        System.out.println(sentence);
+    }
+}
+import java.util.Scanner;
+
+public class SecretAndGuess {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter secret string:");
+        String secret = in.nextLine();
+        System.out.println("Enter guess string:");
+        String guess = in.nextLine();
+        
+        int count = 0;
+        int k = secret.indexOf(guess);
+        while (k != -1) {
+            k = secret.indexOf(guess, ++k);
+            count++;
+        }
+        
+        System.out.println(count * guess.length() * guess.length());
+    }
+}
+import java.util.Scanner;
+
+public class WordScramble {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter first string:");
+        String str1 = in.nextLine();
+        System.out.println("Enter second string:");
+        String str2 = in.nextLine();
+        
+        while (!str1.equals("stop") && !str2.equals("stop")) {
+            String str1half = str1.substring(0, str1.length() / 2);
+            String str2half = str2.substring(str2.length() / 2);
+            
+            System.out.println(str1half + str2half);
+            if (str1half.length() > str2half.length()) {
+                System.out.println("Longer half: " + str1half);
+            } else {
+                System.out.println("Longer half: " + str2half);
+            }
+            
+            System.out.println("Enter first string:");
+            str1 = in.nextLine();
+            if (str1.equalsIgnoreCase("stop")) {System.exit(0);}
+            System.out.println("Enter second string:");
+            str2 = in.nextLine();
+        }
+    }
+}
