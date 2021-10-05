@@ -11,7 +11,7 @@ package MoreAbtStrings;
  */
 import java.util.Scanner;
 
-public class ReplaceTheWithA {
+public class ReplaceTheWithA4 {
     
     
     

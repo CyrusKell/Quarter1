@@ -9,7 +9,7 @@ package ForLoop;
  *
  * @author cyrus.kell
  */
-public class EvenNumsTo100 {
+public class EvenNumsTo100_1 {
     public static void main(String[] args) {
         for (int i = 2; i <= 100; i += 2) {
             System.out.println(i);

@@ -11,7 +11,7 @@ package MoreAbtStrings;
  */
 import java.util.Scanner;
 
-public class WordScramble {
+public class WordScramble2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter first string or enter stop to stop:");
