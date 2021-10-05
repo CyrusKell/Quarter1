@@ -14,16 +14,16 @@ import java.util.Scanner;
 public class WordScramble {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter first string:");
+        System.out.println("Enter first string or enter stop to stop:");
         String str1 = in.nextLine();
-        System.out.println("Enter second string:");
+        System.out.println("Enter second string or enter stop to stop:");
         String str2 = in.nextLine();
         
         while (!str1.equals("stop") && !str2.equals("stop")) {
             String str1half = str1.substring(0, str1.length() / 2);
             String str2half = str2.substring(str2.length() / 2);
             
-            System.out.println(str1half + str2half);
+            System.out.println("Word scramble: " + str1half + str2half);
             if (str1half.length() > str2half.length()) {
                 System.out.println("Longer half: " + str1half);
             } else {
