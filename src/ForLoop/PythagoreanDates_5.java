@@ -13,7 +13,7 @@ public class PythagoreanDates_5 {
     public static void main(String[] args) {
         for (int year = 0; year <= 20; year++) {
             for (int month = 1; month <= 12; month++) {
-                for (int day = 1; day <= 30; day++) {
+                for (int day = 1; day <= 31; day++) {
                     boolean a = day * day + month * month == year * year;
                     boolean b = day * day + year * year == month * month;
                     boolean c = month * month + year * year == day * day;
