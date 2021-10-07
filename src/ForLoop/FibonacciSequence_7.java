@@ -11,7 +11,7 @@ package ForLoop;
  */
 import java.util.Scanner;
 
-public class FibonacciSequence {
+public class FibonacciSequence_7 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a positive integer");
