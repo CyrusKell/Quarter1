@@ -26,6 +26,5 @@ public class PrimeFactors_9 {
             }
         }
         System.out.println();
-        
     }
 }
