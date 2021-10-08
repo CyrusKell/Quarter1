@@ -11,7 +11,7 @@ package Methods;
  */
 import java.util.Scanner;
 
-public class FindMaxMethod {
+public class FindMax_1 {
     public static int findMax(int a, int b) {
         if (a > b) {
             return a;
