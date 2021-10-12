@@ -29,10 +29,7 @@ public class MaxStepsAndGoal_6 {
             if (sum < 0 || sum >= goal) break;
         }
         
-        if (sum >= goal) {
-            return true;
-        } else {
-            return false;
-        }
+        System.out.println(sum + " , " + goal);
+        return sum >= goal;
     }
 }
