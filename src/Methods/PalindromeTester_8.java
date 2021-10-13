@@ -24,17 +24,16 @@ public class PalindromeTester_8 {
             }
         }
         
-        boolean isPalindrome = true;
         for (int i = 0; i <= string.length() / 2; i++) {
             if (string.charAt(i) != string.charAt(string.length() - i - 1)) {
-                isPalindrome = false;
+                return false;
             }
         }
         
-        return isPalindrome;
+        return true;
     }
     
     public static void main(String[] args) {
-        System.out.println(PalindromeTester("Ta co. ,,. c,.at"));
+        System.out.println(PalindromeTester("RaC,. e,. c Ar."));
     }
 }

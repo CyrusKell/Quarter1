@@ -18,7 +18,8 @@ public class TableOfSquaresAndCubes_3 {
         int n = in.nextInt();
         
         for (int i = 1; i <= n; i++) {
-            System.out.println(i + " " + i * i + " " + i * i * i);
+            System.out.println(i + " " + Math.pow(i, 2) + " " + Math.pow(i, 3));
+
         }
     }
 }
