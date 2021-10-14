@@ -11,16 +11,11 @@ package Recursive;
  */
 public class Fibonacci_2 {
     public static int fibonacci(int n) {
-        int count = 0;
-        if (n != count) {
-            int i = 1;
-            count++;
-            i = fibonacci(i + n);
-        }
-        return i;
+        if (n <= 1) return n;
+        return fibonacci(n - 2) + fibonacci(n - 1);
     }
     
     public static void main(String[] args) {
-        System.out.println(fibonacci(6));
+        System.out.println(fibonacci(8));
     }
 }

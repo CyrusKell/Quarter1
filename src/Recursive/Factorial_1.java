@@ -9,7 +9,7 @@ package Recursive;
  *
  * @author cyrus.kell
  */
-public class Factorial {
+public class Factorial_1 {
     public static int factorial(int n) {
         if (n==1) return 1;
         return n*factorial(n-1);
