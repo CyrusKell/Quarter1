@@ -15,9 +15,10 @@ public class ReverseWords_4 {
            reverse(str.substring(k + 1));
            System.out.println(str.substring(0, k));
 
+       } else {
+           System.out.println(str);
        }
-       if (k == -1) System.out.println(str);
-    }
+    }   
     
     public static void main(String[] args) {
         reverse("I am a student");
