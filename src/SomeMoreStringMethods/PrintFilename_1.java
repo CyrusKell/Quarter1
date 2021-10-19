@@ -3,19 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Recursive;
+package SomeMoreStringMethods;
 
 /**
  *
  * @author cyrus.kell
  */
-public class Fibonacci_2 {
-    public static int fibonacci(int n) {
-        if (n <= 1) return n;
-        return fibonacci(n - 2) + fibonacci(n - 1);
-    }
-    
+public class PrintFilename_1 {
     public static void main(String[] args) {
-        System.out.println(fibonacci(26));
+        System.out.println("The 'file' is in C:\\ol302_Labs\\Unit");
+        System.out.println("Bye! Bye!");
     }
 }
