@@ -12,8 +12,8 @@ package OneDArrays;
 public class FifthAndNinth_1 {
     public static void main(String[] args) {
         int[] array = {3, 5, 7, 9, 2, 4, 6, 8, 15, 30};
-        System.out.println(array[5]);
-        System.out.println(array[9]);
+        System.out.println(array[4]);
+        System.out.println(array[8]);
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
