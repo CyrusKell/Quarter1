@@ -9,7 +9,7 @@ package OneDArraysPart2;
  *
  * @author cyrus.kell
  */
-public class Reverse {
+public class Reverse_4 {
     public static int[] reverse(int[] arr) {
         int[] reverse = new int[arr.length];
         int j = 0;

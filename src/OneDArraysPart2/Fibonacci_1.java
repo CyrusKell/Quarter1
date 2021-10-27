@@ -9,16 +9,16 @@ package OneDArraysPart2;
  *
  * @author cyrus.kell
  */
-public class Search {
-    public static boolean search(int[] array, int target) {
-        for (int num : array) {
-            if (num == target) return true;
-        }
-        return false;
-    }
-    
+public class Fibonacci_1 {
     public static void main(String[] args) {
-        int[] array = {1,2,3,4};
-        System.out.println(search(array, 4));
+        int[] fib = new int[20];
+        fib[0] = 1;
+        fib[1] = 1;
+        for (int i = 2; i < fib.length; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        for (int n : fib) {
+            System.out.println(n);
+        }
     }
 }
