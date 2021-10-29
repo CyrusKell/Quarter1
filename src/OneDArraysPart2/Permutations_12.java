@@ -10,16 +10,26 @@ package OneDArraysPart2;
  * @author cyrus.kell
  */
 public class Permutations_12 {
-    public static void permutations(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr.length; j++) {
-                
-            }
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    
+    public static void permutations(int[] arr, int j) {
+        for (int i = j; i < arr.length; i++) {
+            swap(arr, i, j);
+            permutations(arr, j+1);
+            swap(arr, i, j);
+        }
+        if (j == arr.length - 1) {
+            for(int n : arr) System.out.print(n + ",");
+            System.out.println();
         }
     }
     
     public static void main(String[] args) {
         int[] arr = {3,7,8};
-        permutations(arr);
+        permutations(arr, 0);
     }
 }
