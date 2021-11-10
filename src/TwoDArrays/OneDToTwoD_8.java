@@ -26,7 +26,7 @@ public class OneDToTwoD_8 {
         int[] a = {1,2,3,4,5,6,7,8,9};
         int[][] twoD = convert(a);
         for (int[] row : twoD) {
-            for (int n : row) System.out.print(n + " ");
+            for (int n : row) System.out.print(n + "\t");
             System.out.println();
         }
     }

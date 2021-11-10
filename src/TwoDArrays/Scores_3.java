@@ -23,16 +23,15 @@ public class Scores_3 {
             }
         }
         
-        System.out.print("   ");
+        System.out.print("\t");
         for (int i = 0; i < teams[0].length; i++) {
-            System.out.print("team" + i + " ");
+            System.out.print("team" + i + "\t");
         }
         System.out.println();
         for (int i = 0; i < teams.length; i++) {
-            System.out.print("G" + i + " ");
+            System.out.print("G" + i + "\t");
             for(int k = 0; k < teams[i].length; k++) {
-                System.out.print(teams[i][k] + " ");
-                for (int j = 1; j <= 5 - Integer.toString(teams[i][k]).length(); j++) System.out.print(" ");
+                System.out.print(teams[i][k] + "\t");
             }
             System.out.println();
         }

@@ -21,12 +21,12 @@ public class Average_5 {
         
         for (int[] row : a) {
             System.out.print("      ");
-            for (int n : row) System.out.print(n + "  ");
+            for (int n : row) System.out.print(n + "    ");
             System.out.println();
         }
         
         System.out.print("Aver: ");
-        for (double sum : sums) System.out.print(sum/a.length + " ");
+        for (double sum : sums) {System.out.printf("%.1f", sum/a.length); System.out.print("  ");}
         System.out.println();
     }
 }
