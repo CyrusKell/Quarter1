@@ -37,6 +37,11 @@ public class Zigzag2_14 {
     
     public static void main(String[] args) {
         int[][] a = {{1,3,5,7,9,0}, {2,4,6,8,0,2}, {3,6,7,5,9,3,}, {4,6,9,8,1,0}, {2,7,4,9,3,6,}, {1,4,2,9,3,5,}};
+        for (int[] row : a) {
+            for (int n : row) System.out.print(n + " ");
+            System.out.println();
+        }
+        System.out.println();
         for (int n : zigzag(a)) System.out.print(n + " ");
         System.out.println();
     }
