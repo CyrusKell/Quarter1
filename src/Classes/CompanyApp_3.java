@@ -56,9 +56,7 @@ class Company {
     public Company(Employee[] e) {employees = e;}
     
     public void printAllEmployees() {
-        for (Employee e : employees) {
-            System.out.println(e);
-        }
+        for (Employee e : employees) System.out.println(e);
     }
     public Employee searchEmployee(String id) {
         for (Employee e : employees) if (e.getId().equals(id)) return e;

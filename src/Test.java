@@ -10,13 +10,13 @@
  */
 public class Test {
     public static void main(String[] args) {
-        int t = 0;
-        int f = 0;
-        for (int i = 0; i < 100000; i++) {
-            double rand = Math.random() * 100 + 1;
-            if (rand <= 60) t++;
-            else f++;
-        }
-        System.out.println((double)t/(t+f) * 100 + "%");
+        var n = new Integer(4); 
+        Object i = new Integer(n.intValue());
+        
+        Object k = 4;
+        System.out.println(k);
+        k = "hi";
+        k = new String("test");
+        System.out.println(k);
     }
 }
