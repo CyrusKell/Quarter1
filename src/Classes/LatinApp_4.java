@@ -13,6 +13,10 @@ public class LatinApp_4 {
     public static void main(String[] args) {
         int[][] a = {{1,2,3,4}, {2,3,4,1}, {3,4,1,2}, {4,1,2,3}};
         System.out.println(Latin.isLatin(a));
+        int[] b = {1,2,2,2,3};
+        int[] c = {1,3,2,4};
+        System.out.println(Latin.hasAllValues(b, c))
+        
     }
 }
 

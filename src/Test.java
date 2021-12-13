@@ -1,3 +1,8 @@
+
+import java.util.ArrayList;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,13 +15,11 @@
  */
 public class Test {
     public static void main(String[] args) {
-        var n = new Integer(4); 
-        Object i = new Integer(n.intValue());
-        
-        Object k = 4;
-        System.out.println(k);
-        k = "hi";
-        k = new String("test");
-        System.out.println(k);
+        ArrayList<Integer> list  = new ArrayList<Integer>();
+        int k;
+        for(k = 1; k<= 8; k++)list.add(k);
+        for(k = 0; k < list.size(); k ++) list.remove(k); 
+        for(k = 0; k < list.size(); k++) System.out.print(list.get(k) + " ");
+        System.out.println();
     }
 }

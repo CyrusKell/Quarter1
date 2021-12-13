@@ -1,1 +1,0 @@
-MoreAbtStrings.Read2Strings
