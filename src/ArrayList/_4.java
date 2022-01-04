@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author cyrus.kell
  */
-public class _1 {
+public class _4 {
     public static void main(String[] args) {
         ArrayList<Integer> alist = new ArrayList<Integer>();
         for (int i = 0; i < 10; i++) {

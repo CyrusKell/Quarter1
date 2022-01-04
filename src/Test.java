@@ -15,11 +15,10 @@ import java.util.ArrayList;
  */
 public class Test {
     public static void main(String[] args) {
-        ArrayList<Integer> list  = new ArrayList<Integer>();
-        int k;
-        for(k = 1; k<= 8; k++)list.add(k);
-        for(k = 0; k < list.size(); k ++) list.remove(k); 
-        for(k = 0; k < list.size(); k++) System.out.print(list.get(k) + " ");
-        System.out.println();
+        ArrayList<String> names  = new ArrayList<String>();
+        names.add(0, "Anya");
+        names.add(0, "Ben");
+        names.add(0, "Cathy");
+        for(int k = 0; k < names.size(); k++) System.out.print(names.get(k) + " ");
     }
 }

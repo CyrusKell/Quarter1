@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author cyrus.kell
  */
-public class _2 {
+public class _5 {
     public static void main(String[] args) {
         ArrayList<String> a = new ArrayList<String>();
         Scanner in = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class _2 {
             a.add(in.nextLine());
         }
         a.set(2, "John");
-        System.out.println(a);
+        for (String str : a) System.out.print(str + " ");
         a.remove(1);
         System.out.println(a);
         System.out.println(a.contains("Jonny"));
