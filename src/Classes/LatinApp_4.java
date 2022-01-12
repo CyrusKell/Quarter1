@@ -15,8 +15,7 @@ public class LatinApp_4 {
         System.out.println(Latin.isLatin(a));
         int[] b = {1,2,2,2,3};
         int[] c = {1,3,2,4};
-        System.out.println(Latin.hasAllValues(b, c))
-        
+        System.out.println(Latin.hasAllValues(b, c));
     }
 }
 

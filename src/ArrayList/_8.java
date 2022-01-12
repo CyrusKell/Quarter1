@@ -44,6 +44,7 @@ public class _8 {
                list.set(i, list.get(i-1));
                list.set(i-1, temp);
                sort(list);
+               break;
            }
         }
     }
