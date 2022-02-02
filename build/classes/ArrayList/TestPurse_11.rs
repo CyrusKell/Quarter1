@@ -1,2 +1,0 @@
-ArrayList.TestPurse_11
-ArrayList.Purse

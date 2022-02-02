@@ -13,15 +13,11 @@ import java.util.ArrayList;
 public class TestPurse_11 {
     public static void main(String[] args) {
         Purse a = new Purse();
-        a.addCoin("Quarter");
-        a.addCoin("Dime");
-        a.addCoin("Nickel");
-        a.addCoin("Penny");
         Purse b = new Purse();
-        b.addCoin("Quarter");
-        b.addCoin("Dime");
-        b.addCoin("Nickel");
-        b.addCoin("Penny");
+        String[] coins = {"Quarter", "Dime", "Nickel", "Quarter"};
+        a.addCoinsAsArray(coins);
+        b.addCoinsAsArray(coins);
+
         
         a.reverse();
         System.out.println(a);
@@ -32,9 +28,12 @@ public class TestPurse_11 {
 }
 
 class Purse {
-    ArrayList<String> money = new ArrayList<String>();
-    
+    ArrayList<String> money ;
+    public Purse() {
+        money = new ArrayList<String>();
+    }
     public void addCoin(String coinName) {money.add(coinName);}
+    public void addCoinsAsArray (String[] coins) {for (String coin : coins) addCoin(coin);}
     public String toString() {
         String output = "The content is: (";
         for (String coin : money) output+=" " + coin + ",";
@@ -58,7 +57,6 @@ class Purse {
         return value;
     }
     public boolean equals(Purse purse) {
-        if (this.getValue() == purse.getValue()) return true;
-        return false;
+        return this.getValue() == purse.getValue();
     }
 }
