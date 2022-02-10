@@ -53,5 +53,6 @@ class Test {
         frame.getContentPane().add(BorderLayout.NORTH, mb);
         frame.getContentPane().add(BorderLayout.CENTER, ta);
         frame.setVisible(true);
+        
     }
 }
